@@ -1,0 +1,29 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Jhon Doe",
+      "password": "1234",
+      "avatar": "../src/assets/img/avatars/1.png",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "name": "Jhon Doe",
+      "avatar": "../src/assets/img/avatars/5.png",
+      "isAdmin": true
+    },
+    {
+      "id": 3,
+      "name": "Jhon Doe",
+      "avatar": "../src/assets/img/avatars/6.png",
+      "isAdmin": true
+    },
+    {
+      "id": 4,
+      "name": "Jhon Doe",
+      "avatar": "../src/assets/img/avatars/7.png",
+      "isAdmin": true
+    }
+  ]
+}
