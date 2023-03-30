@@ -4,6 +4,7 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import Account from "./components/accounts/Account";
 import RegisterForm from "./components/forms/RegisterForm";
 import Root from "./components/layouts/Root";
 import Dashboard from "./pages/Dashboard";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Root />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="register" element={<RegisterForm />} />
+          <Route path="/account-settings-account" element={<Account />} />
         </Route>
       </Route>
     )

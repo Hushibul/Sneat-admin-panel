@@ -2,12 +2,14 @@ import BasicInputLabel from "../base/BasicInputLabel";
 import BrandLogo from "../../assets/img/icons/brands/logo.svg";
 import BasicPassword from "../inputs/BasicPassword";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { AuthContext } from "../../context/AuthContext";
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  const { loginData, setLoginData } = useContext(AuthContext);
 
   const API_URL = "http://localhost:3500/user";
   const {
@@ -23,12 +25,12 @@ const LoginForm = () => {
     mode: "onBlur",
   });
 
-  const [userData, setUserData] = useState<any>({});
+  // const [userData, setUserData] = useState<any>({});
 
   useEffect(() => {
     async function fetchData() {
-      await axios.get(API_URL).then((res) => setUserData(res.data[0]));
-      console.log(userData);
+      await axios.get(API_URL).then((res) => setLoginData(res.data[0]));
+      console.log(loginData);
     }
 
     fetchData();
@@ -36,7 +38,7 @@ const LoginForm = () => {
   }, []);
 
   const formSubmit = (data: any) => {
-    data.email === userData?.name && data.password === userData?.password
+    data.email === loginData?.name && data.password === loginData?.password
       ? navigate("/dashboard")
       : navigate("/");
     console.log(data);

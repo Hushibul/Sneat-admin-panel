@@ -2,7 +2,7 @@
   "user": [
     {
       "id": 1,
-      "name": "Jhon Doe",
+      "name": "admin",
       "password": "1234",
       "avatar": "../src/assets/img/avatars/1.png",
       "isAdmin": true
