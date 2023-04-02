@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Root />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="register" element={<RegisterForm />} />
-          <Route path="/account-settings-account" element={<Account />} />
+          <Route path="/account" element={<Account />} />
         </Route>
       </Route>
     )

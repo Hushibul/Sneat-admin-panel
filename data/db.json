@@ -5,25 +5,25 @@
       "name": "admin",
       "password": "1234",
       "avatar": "../src/assets/img/avatars/1.png",
-      "isAdmin": true
+      "type": "admin"
     },
     {
       "id": 2,
       "name": "Jhon Doe",
       "avatar": "../src/assets/img/avatars/5.png",
-      "isAdmin": true
+      "type": "admin"
     },
     {
       "id": 3,
       "name": "Jhon Doe",
       "avatar": "../src/assets/img/avatars/6.png",
-      "isAdmin": true
+      "type": "admin"
     },
     {
       "id": 4,
       "name": "Jhon Doe",
       "avatar": "../src/assets/img/avatars/7.png",
-      "isAdmin": true
+      "type": "admin"
     }
   ]
 }

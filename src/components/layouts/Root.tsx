@@ -8,7 +8,7 @@ const Root = () => {
       <header>
         <Navbar />
       </header>
-      <main>
+      <main className="xl:ml-64">
         <Outlet />
       </main>
       <footer>
