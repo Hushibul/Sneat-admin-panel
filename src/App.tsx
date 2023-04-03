@@ -4,11 +4,13 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
-import Account from "./components/accounts/Account";
+import Account from "./pages/Account";
 import RegisterForm from "./components/forms/RegisterForm";
 import Root from "./components/layouts/Root";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
+import Notification from "./pages/Notification";
+import Connection from "./pages/Connection";
 
 function App() {
   const router = createBrowserRouter(
@@ -19,6 +21,8 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="register" element={<RegisterForm />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/notification" element={<Notification />} />
+          <Route path="/connection" element={<Connection />} />
         </Route>
       </Route>
     )

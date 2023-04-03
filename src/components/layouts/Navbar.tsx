@@ -29,11 +29,9 @@ const Navbar = () => {
 
   const { loginData } = useContext(AuthContext);
 
-  // const [openAccounts, setOpenAccounts] = useState(false);
-
   return (
     <>
-      <div className="bg-white px-6 rounded-lg py-4 m-8 mt-4 flex justify-between items-center">
+      <div className="bg-white px-6 rounded-lg py-4 mx-2 mt-4 flex justify-between items-center md:m-8">
         <div className="flex items-center gap-3">
           <FiMenu
             onClick={() => setOpenMenu(true)}
@@ -41,7 +39,7 @@ const Navbar = () => {
           />
           <FiSearch className="text-textMain text-2xl" />
           <input
-            type="py-6 bg-transparent"
+            type="px-3 py-3 text-slate-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none w-full pl-10"
             onFocus={() => console.log("Focused")}
             onBlur={() => console.log("Blur")}
             placeholder="Search..."
@@ -49,7 +47,7 @@ const Navbar = () => {
         </div>
         <img
           onClick={() => setOpenProfile(!openProfile)}
-          className="w-10 h-10 rounded-full cursor-pointer"
+          className="w-10 h-10 rounded-full cursor-pointer translate-x-[-20px] md:translate-x-0"
           src={AvatarOne}
           alt="avatar"
         />
@@ -120,7 +118,7 @@ const Navbar = () => {
             className="bg-white rounded-full absolute top-6 right-[-10px]"
           >
             <IoIosArrowDropleftCircle
-              className="text-primary xl:hidden"
+              className="text-primary cursor-pointer xl:hidden"
               size={35}
             />
           </div>
@@ -140,12 +138,14 @@ const Navbar = () => {
             className="text-textMain mt-4 flex items-center gap-3 font-bold group cursor-pointer"
           >
             <MdManageAccounts size={20} /> <span>Accounts Settings</span>{" "}
-            <div className="group-hover:rotate-90">
+            <div className={openAccount ? "rotate-90" : "rotate-0"}>
               <MdOutlineKeyboardArrowRight size={20} />
             </div>
           </div>
           <ul
-            className={` text-textMain font-bold pl-8 ${openAccount} ? "block": "hidden"`}
+            className={`bg-white rounded-md text-textMain pl-10 font-bold ${
+              openAccount ? "block" : "hidden"
+            }`}
           >
             {accountsetting.map((item) => (
               <li key={item.id} className="mt-4">
