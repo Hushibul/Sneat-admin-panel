@@ -19,6 +19,7 @@ import {
   accountsetting,
   authentications,
   misc,
+  userInterface,
 } from "../../assets/constants/constant";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -26,6 +27,7 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [openProfile, setOpenProfile] = useState<boolean>(false);
   const [openAccount, setOpenAccount] = useState<boolean>(false);
+  const [openMisc, setOpenMisc] = useState<boolean>(false);
 
   const { loginData } = useContext(AuthContext);
 
@@ -39,10 +41,9 @@ const Navbar = () => {
           />
           <FiSearch className="text-textMain text-2xl" />
           <input
-            type="px-3 py-3 text-slate-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none w-full pl-10"
-            onFocus={() => console.log("Focused")}
-            onBlur={() => console.log("Blur")}
-            placeholder="Search..."
+            type="text"
+            className="bg-tranparent pl-3 w-full outline-0 focus:ouline-0"
+            placeholder="Search"
           />
         </div>
         <img
@@ -53,8 +54,7 @@ const Navbar = () => {
         />
 
         <div
-          onBlur={() => setOpenProfile(false)}
-          className={`fixed top-20 right-8 w-52 bg-white rounded-md shadow-lg ${
+          className={`fixed top-24 right-8 w-52 bg-white rounded-md shadow-lg ${
             openProfile ? "block" : "hidden"
           }`}
         >
@@ -105,8 +105,11 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Navmenu  */}
       <div
-        className={`bg-white w-64 fixed top-0 left-0 h-screen pl-8 overflow-y-scoll transition-all duration-150 translate-x-[-300px] xl:translate-x-0 ${
+        onBlur={() => setOpenMenu(false)}
+        className={`bg-white w-64 fixed top-0 left-0 h-screen pl-8 overflow-y-scroll transition-all duration-150 shadow-lg translate-x-[-300px] xl:shadow-none xl:translate-x-0 ${
           openMenu ? "translate-x-[0px]" : "translate-x-[-300px]"
         }  `}
       >
@@ -124,6 +127,7 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* DashBoard  */}
         <Link
           className=" text-textMain flex items-center gap-3 font-bold"
           to="/dashboard"
@@ -133,6 +137,8 @@ const Navbar = () => {
 
         <div className="mt-4">
           <span className="text-textMain uppercase text-sm">Pages</span>
+
+          {/* Account Settings  */}
           <div
             onClick={() => setOpenAccount(!openAccount)}
             className="text-textMain mt-4 flex items-center gap-3 font-bold group cursor-pointer"
@@ -156,6 +162,7 @@ const Navbar = () => {
             ))}
           </ul>
 
+          {/* Authentication  */}
           <div className="text-textMain mt-4 flex items-center gap-3 font-bold group cursor-pointer">
             <MdManageAccounts size={20} /> <span>Authentication</span>{" "}
             <div className="group-focus:rotate-90">
@@ -173,7 +180,57 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <li className="text-textMain flex items-center gap-4 font-bold"></li>
+        {/* Misc  */}
+        <div
+          onClick={() => setOpenMisc(!openMisc)}
+          className="text-textMain mt-4 flex items-center gap-3 font-bold group cursor-pointer"
+        >
+          <MdManageAccounts size={20} /> <span>Misc</span>{" "}
+          <div className={openMisc ? "rotate-90" : "rotate-0"}>
+            <MdOutlineKeyboardArrowRight size={20} />
+          </div>
+        </div>
+        <ul
+          className={`bg-white rounded-md text-textMain pl-10 font-bold ${
+            openMisc ? "block" : "hidden"
+          }`}
+        >
+          {misc.map((item) => (
+            <li key={item.id} className="mt-4">
+              <Link className="list-disc" to={item.path}>
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-4">
+          <span className="text-textMain uppercase text-sm">Components</span>
+
+          {/* User Interface  */}
+          <div
+            onClick={() => setOpenMisc(!openMisc)}
+            className="text-textMain mt-4 flex items-center gap-3 font-bold group cursor-pointer"
+          >
+            <MdManageAccounts size={20} /> <span>User Interface</span>{" "}
+            <div className={openMisc ? "rotate-90" : "rotate-0"}>
+              <MdOutlineKeyboardArrowRight size={20} />
+            </div>
+          </div>
+          <ul
+            className={`bg-white rounded-md text-textMain pl-10 font-bold ${
+              openMisc ? "block" : "hidden"
+            }`}
+          >
+            {userInterface.map((item) => (
+              <li key={item.id} className="mt-4">
+                <Link className="list-disc" to={item.path}>
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

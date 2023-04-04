@@ -48,6 +48,132 @@ export const misc = [
   },
 ];
 
+export const userInterface = [
+  {
+    id: 1,
+    name: "Accordion",
+    path: "/accordion",
+  },
+  {
+    id: 2,
+    name: "Alerts",
+    path: "/alerts",
+  },
+  {
+    id: 3,
+    name: "Badges",
+    path: "/badges",
+  },
+  {
+    id: 4,
+    name: "Buttons",
+    path: "/buttons",
+  },
+  {
+    id: 5,
+    name: "Carousel",
+    path: "/carousel",
+  },
+  {
+    id: 6,
+    name: "Collapse",
+    path: "/collapse",
+  },
+  {
+    id: 7,
+    name: "Dropdown",
+    path: "/dropdown",
+  },
+  {
+    id: 8,
+    name: "Footer",
+    path: "/footer",
+  },
+  {
+    id: 9,
+    name: "List groups",
+    path: "/list-groups",
+  },
+  {
+    id: 10,
+    name: "Modals",
+    path: "/modals",
+  },
+  {
+    id: 11,
+    name: "Navbar",
+    path: "/navbar",
+  },
+  {
+    id: 12,
+    name: "Offcanvas",
+    path: "/offcanvas",
+  },
+  {
+    id: 13,
+    name: "Spinners",
+    path: "/spinners",
+  },
+  {
+    id: 14,
+    name: "Tabs & Pills",
+    path: "/tabs",
+  },
+  {
+    id: 15,
+    name: "Toasts",
+    path: "/toasts",
+  },
+  {
+    id: 16,
+    name: "Tooltips & Popovers",
+    path: "/tooltips",
+  },
+  {
+    id: 17,
+    name: "Typography",
+    path: "/typography",
+  },
+];
+
+export const buttons = [
+  {
+    id: 1,
+    name: "Primary",
+    color: "primary",
+  },
+  {
+    id: 2,
+    name: "Secondary",
+    color: "secondary",
+  },
+  {
+    id: 3,
+    name: "Success",
+    color: "success",
+  },
+  {
+    id: 4,
+    name: "Danger",
+    color: "danger",
+  },
+  {
+    id: 5,
+    name: "Warning",
+    color: "warning",
+  },
+  {
+    id: 6,
+    name: "Info",
+    color: "info",
+  },
+  {
+    id: 7,
+    name: "Dark",
+    color: "dark",
+  },
+];
+
 export const countryOptions = [
   {
     value: "",
