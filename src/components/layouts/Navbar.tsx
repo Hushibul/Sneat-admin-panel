@@ -118,7 +118,7 @@ const Navbar = () => {
           <h2 className="text-2xl font-extrabold text-textMain">Sneat</h2>
           <div
             onClick={() => setOpenMenu(false)}
-            className="bg-white rounded-full absolute top-6 right-[-10px]"
+            className="bg-white rounded-full z-50 fixed top-6 right-0"
           >
             <IoIosArrowDropleftCircle
               className="text-primary cursor-pointer xl:hidden"

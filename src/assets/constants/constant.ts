@@ -1,4 +1,10 @@
-export const menu = [];
+import CardOne from "../../assets/img/elements/2.jpg";
+import CardTwo from "../../assets/img/elements/13.jpg";
+import CardThree from "../../assets/img/elements/4.jpg";
+import CardFour from "../../assets/img/elements/18.jpg";
+import CardFive from "../../assets/img/elements/19.jpg";
+import CardSix from "../../assets/img/elements/20.jpg";
+
 export const accountsetting = [
   {
     id: 1,
@@ -52,7 +58,7 @@ export const userInterface = [
   {
     id: 1,
     name: "Accordion",
-    path: "/accordion",
+    path: "/accordions",
   },
   {
     id: 2,
@@ -76,61 +82,66 @@ export const userInterface = [
   },
   {
     id: 6,
+    name: "Cards",
+    path: "/cards",
+  },
+  {
+    id: 7,
     name: "Collapse",
     path: "/collapse",
   },
   {
-    id: 7,
+    id: 8,
     name: "Dropdown",
     path: "/dropdown",
   },
   {
-    id: 8,
+    id: 9,
     name: "Footer",
     path: "/footer",
   },
   {
-    id: 9,
+    id: 10,
     name: "List groups",
     path: "/list-groups",
   },
   {
-    id: 10,
+    id: 11,
     name: "Modals",
     path: "/modals",
   },
   {
-    id: 11,
+    id: 12,
     name: "Navbar",
     path: "/navbar",
   },
   {
-    id: 12,
+    id: 13,
     name: "Offcanvas",
     path: "/offcanvas",
   },
   {
-    id: 13,
+    id: 14,
     name: "Spinners",
     path: "/spinners",
   },
   {
-    id: 14,
+    id: 15,
     name: "Tabs & Pills",
     path: "/tabs",
   },
   {
-    id: 15,
+    id: 16,
     name: "Toasts",
     path: "/toasts",
   },
   {
-    id: 16,
+    id: 17,
     name: "Tooltips & Popovers",
     path: "/tooltips",
   },
   {
-    id: 17,
+    id: 18,
     name: "Typography",
     path: "/typography",
   },
@@ -171,6 +182,110 @@ export const buttons = [
     id: 7,
     name: "Dark",
     color: "dark",
+  },
+];
+
+export const accordionItems = [
+  {
+    id: 1,
+    title: "Accordion Item 1",
+    content:
+      "Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing marzipan gummi bears macaroon dragée danish caramels powder. Bear claw dragée pastry topping soufflé. Wafer gummi bears marshmallow pastry pie.",
+  },
+  {
+    id: 2,
+    title: "Accordion Item 2",
+    content:
+      "Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing marzipan gummi bears macaroon dragée danish caramels powder. Bear claw dragée pastry topping soufflé. Wafer gummi bears marshmallow pastry pie.",
+  },
+  {
+    id: 3,
+    title: "Accordion Item 3",
+    content:
+      "Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing marzipan gummi bears macaroon dragée danish caramels powder. Bear claw dragée pastry topping soufflé. Wafer gummi bears marshmallow pastry pie.",
+  },
+];
+
+export const alertsItem = [
+  {
+    id: 1,
+    textColor: "primary",
+    background: "indigo",
+  },
+  {
+    id: 2,
+    textColor: "secondary",
+    background: "slate",
+  },
+  {
+    id: 3,
+    textColor: "success",
+    background: "gray",
+  },
+  {
+    id: 4,
+    textColor: "danger",
+    background: "red",
+  },
+  {
+    id: 5,
+    textColor: "warning",
+    background: "pink",
+  },
+  {
+    id: 6,
+    textColor: "info",
+    background: "sky",
+  },
+  {
+    id: 7,
+    textColor: "dark",
+    background: "neutral",
+  },
+];
+
+export const gridCards = [
+  {
+    id: 1,
+    title: "Card Title",
+    content:
+      "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    image: CardOne,
+  },
+  {
+    id: 2,
+    title: "Card Title",
+    content:
+      "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    image: CardTwo,
+  },
+  {
+    id: 3,
+    title: "Card Title",
+    content:
+      "This is a longer card with supporting text below as a natural lead-in to additional content.",
+    image: CardThree,
+  },
+  {
+    id: 4,
+    title: "Card Title",
+    content:
+      "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    image: CardFour,
+  },
+  {
+    id: 5,
+    title: "Card Title",
+    content:
+      "This is a longer card with supporting text below as a natural lead-in to additional content.",
+    image: CardFive,
+  },
+  {
+    id: 6,
+    title: "Card Title",
+    content:
+      "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    image: CardSix,
   },
 ];
 

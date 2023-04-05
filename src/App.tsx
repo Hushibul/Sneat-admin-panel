@@ -14,6 +14,10 @@ import Connection from "./pages/Connection";
 import Error from "./pages/Error";
 import UnderMaintainance from "./pages/UnderMaintainance";
 import Buttons from "./pages/Buttons";
+import Accordions from "./pages/Accordions";
+import Alerts from "./pages/Alerts";
+import Badges from "./pages/Badges";
+import Cards from "./pages/Cards";
 
 function App() {
   const router = createBrowserRouter(
@@ -29,6 +33,10 @@ function App() {
           <Route path="/error" element={<Error />} />
           <Route path="/under-maintainance" element={<UnderMaintainance />} />
           <Route path="/buttons" element={<Buttons />} />
+          <Route path="/accordions" element={<Accordions />} />
+          <Route path="/alerts" element={<Alerts />} />
+          <Route path="/badges" element={<Badges />} />
+          <Route path="/cards" element={<Cards />} />
         </Route>
       </Route>
     )
