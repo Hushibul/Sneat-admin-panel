@@ -40,7 +40,7 @@ const LoginForm = () => {
   const formSubmit = (data: any) => {
     data.email === loginData?.name && data.password === loginData?.password
       ? navigate("/dashboard")
-      : navigate("/");
+      : alert("Username or Password Incorrect");
     console.log(data);
   };
 

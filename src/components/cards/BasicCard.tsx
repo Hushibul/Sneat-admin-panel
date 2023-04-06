@@ -8,7 +8,7 @@ const BasicCard = () => {
       <div className="col-span-12 shadow-md rounded-md overflow-hidden md:col-span-6 lg:col-span-4">
         <img src={OrangeCard} alt="OrangerCard" />
 
-        <div className="px-3 py-6">
+        <div className="p-6">
           <h3 className="text-textMain text-lg font-bold">Card Title</h3>
 
           <p className="text-textMain my-3">
@@ -22,7 +22,7 @@ const BasicCard = () => {
         </div>
       </div>
       <div className="col-span-12 shadow-md md:ml-4 lg:ml-8 rounded-md overflow-hidden md:col-span-6 lg:col-span-4">
-        <div className="px-3 py-4">
+        <div className="p-6">
           <h3 className="text-textMain text-lg font-bold">Card Title</h3>
 
           <p className="text-gray-400 my-1 font-bold">Support and Subtitle</p>
@@ -30,20 +30,20 @@ const BasicCard = () => {
 
         <img src={DounutCard} alt="DounutCard" />
 
-        <p className="ml-4 text-textMain my-3">
+        <p className="px-6 py-3 text-textMain">
           Bear claw sesame snaps gummies chocolate.
         </p>
-        <div className="flex gap-3 items-center px-4">
-          <button className=" py-2 font-semibold  text-primary">
+        <div className="flex gap-3 items-center px-6">
+          <button className="py-2 font-semibold  text-primary">
             Card Link
           </button>
-          <button className=" py-2 font-semibold  text-primary">
+          <button className="py-2 font-semibold  text-primary">
             Another Link
           </button>
         </div>
       </div>
       <div className="col-span-12 shadow-md md:mt-4 lg:ml-8 rounded-md overflow-hidden md:col-span-6 lg:col-span-4">
-        <div className="px-3 py-4">
+        <div className="p-6">
           <h3 className="text-textMain text-lg font-bold">Card Title</h3>
 
           <p className="text-gray-400 my-1 font-bold">Support and Subtitle</p>

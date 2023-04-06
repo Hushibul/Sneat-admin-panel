@@ -18,6 +18,8 @@ import Accordions from "./pages/Accordions";
 import Alerts from "./pages/Alerts";
 import Badges from "./pages/Badges";
 import Cards from "./pages/Cards";
+import Carousal from "./pages/Carousals";
+import Footer from "./pages/Footer";
 
 function App() {
   const router = createBrowserRouter(
@@ -37,6 +39,8 @@ function App() {
           <Route path="/alerts" element={<Alerts />} />
           <Route path="/badges" element={<Badges />} />
           <Route path="/cards" element={<Cards />} />
+          <Route path="/carousel" element={<Carousal />} />
+          <Route path="/footer" element={<Footer />} />
         </Route>
       </Route>
     )

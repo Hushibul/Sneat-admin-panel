@@ -184,6 +184,38 @@ export const buttons = [
     color: "dark",
   },
 ];
+export const cardsColor = [
+  {
+    id: 1,
+    name: "Primary",
+    color: "primary",
+  },
+  {
+    id: 2,
+    name: "Secondary",
+    color: "secondary",
+  },
+  {
+    id: 3,
+    name: "Success",
+    color: "success",
+  },
+  {
+    id: 4,
+    name: "Danger",
+    color: "danger",
+  },
+  {
+    id: 5,
+    name: "Warning",
+    color: "warning",
+  },
+  {
+    id: 6,
+    name: "Info",
+    color: "info",
+  },
+];
 
 export const accordionItems = [
   {
