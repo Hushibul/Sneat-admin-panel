@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SlArrowUp } from "react-icons/sl";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Accordion({ items, isIcon }: any) {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -32,15 +33,21 @@ export default function Accordion({ items, isIcon }: any) {
               ""
             )}
           </button>
-          <div
-            className={`${
-              activeIndex === index
-                ? "h-auto block"
-                : "h-[300px] overflow-hidden hidden"
-            } overflow-auto p-4 pb-6 duration-300 transition-[height] ease`}
-          >
-            {item.content}
-          </div>
+          <AnimatePresence>
+            {activeIndex === index ? (
+              <motion.div
+                initial={{ height: 0 }}
+                animate={{ height: "auto" }}
+                exit={{ height: 0 }}
+                transition={{ duration: 0.5 }}
+                className="p-4 overflow-hidden"
+              >
+                {item.content}
+              </motion.div>
+            ) : (
+              ""
+            )}
+          </AnimatePresence>
         </div>
       ))}
     </div>

@@ -24,10 +24,11 @@ import Footer from "./pages/Footer";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/">
-        <Route index element={<Home />} />
+      <>
+        <Route path="/login" element={<Home />} />
+        <Route path="/register" element={<RegisterForm />} />
         <Route path="/" element={<Root />}>
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route index element={<Dashboard />} />
           <Route path="register" element={<RegisterForm />} />
           <Route path="/account" element={<Account />} />
           <Route path="/notification" element={<Notification />} />
@@ -42,7 +43,7 @@ function App() {
           <Route path="/carousel" element={<Carousal />} />
           <Route path="/footer" element={<Footer />} />
         </Route>
-      </Route>
+      </>
     )
   );
   return (

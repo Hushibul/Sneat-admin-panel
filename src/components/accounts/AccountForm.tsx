@@ -10,6 +10,10 @@ import {
 } from "../../assets/constants/constant";
 const AccountForm = () => {
   const [file, setFiles] = useState<string>("");
+  function handleImageChange(event: any) {
+    const file = event.target.files[0];
+    setFiles(URL.createObjectURL(file));
+  }
   const {
     register,
     handleSubmit,
@@ -51,7 +55,9 @@ const AccountForm = () => {
           <div>
             <label
               htmlFor="fileInput"
-              className={"bg-primary px-6 py-3 text-white rounded-md"}
+              className={
+                "bg-primary cursor-pointer px-6 py-3 text-white rounded-md"
+              }
             >
               Upload File
               <input
@@ -59,7 +65,7 @@ const AccountForm = () => {
                 type="file"
                 id="fileInput"
                 accept=".mp4, .mov, .png, .jpg"
-                onChange={(e) => setFiles(e.target.value)}
+                onChange={handleImageChange}
               />
             </label>
             <button className="px-6 py-3 bg-gray-600 ml-4 text-white rounded-md">

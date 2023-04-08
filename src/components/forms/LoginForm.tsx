@@ -2,14 +2,14 @@ import BasicInputLabel from "../base/BasicInputLabel";
 import BrandLogo from "../../assets/img/icons/brands/logo.svg";
 import BasicPassword from "../inputs/BasicPassword";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useContext } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { AuthContext } from "../../context/AuthContext";
+import useAuth from "../../hooks/useAuth";
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  const { loginData, setLoginData } = useContext(AuthContext);
+  const { loginData, setLoginData } = useAuth();
 
   const API_URL = "http://localhost:3500/user";
   const {
@@ -25,7 +25,7 @@ const LoginForm = () => {
     mode: "onBlur",
   });
 
-  // const [userData, setUserData] = useState<any>({});
+  const [error, setError] = useState<string>("");
 
   useEffect(() => {
     async function fetchData() {
@@ -39,13 +39,15 @@ const LoginForm = () => {
 
   const formSubmit = (data: any) => {
     data.email === loginData?.name && data.password === loginData?.password
-      ? navigate("/dashboard")
-      : alert("Username or Password Incorrect");
+      ? navigate("/")
+      : setError("Username or Password Incorrect!");
     console.log(data);
+
+    localStorage.setItem("user", JSON.stringify(data));
   };
 
   return (
-    <div className="mx-3 mt-20 pt-6 w-full px-6 md:w-[400px] bg-white md:mx-auto rounded">
+    <div className="mx-3 mt-10 pt-6 w-full px-6 md:w-[400px] bg-white md:mx-auto rounded-md shadow-md">
       <div className="flex items-center gap-2 justify-center mb-10">
         <img className="w-6 h-10" src={BrandLogo} alt="BrandLogo" />
         <h2 className="text-2xl font-bold text-textMain">Sneat</h2>
@@ -61,20 +63,25 @@ const LoginForm = () => {
           label="Email or Username"
           type="text"
           placeholder="Enter your email or username"
-          {...register("email", {
-            required: { value: true, message: "Email or Username is required" },
-          })}
-          register={{ ...register("email") }}
+          register={{
+            ...register("email", {
+              required: {
+                value: true,
+                message: "Email or Username is required",
+              },
+            }),
+          }}
           error={errors.email?.message}
         />
         <BasicPassword
           label="Password"
           placeholder="........."
-          {...register("password", {
-            required: { value: true, message: "Password is required" },
-          })}
-          register={{ ...register("password") }}
-          error={errors.password?.message}
+          register={{
+            ...register("password", {
+              required: { value: true, message: "Password is required" },
+            }),
+          }}
+          error={error ? error : errors.password?.message}
         />
         <div className="flex items-center gap-3">
           <input

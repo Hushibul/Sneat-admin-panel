@@ -97,7 +97,7 @@ const Navbar = () => {
             </Link>
             <Link
               className="pb-3 pt-5 border-t border-t-gray-300 flex items-center text-textMain gap-3"
-              to={"#"}
+              to={"/login"}
             >
               <MdPowerSettingsNew />
               Log Out
