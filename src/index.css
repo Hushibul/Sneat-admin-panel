@@ -7,6 +7,8 @@
 @layer base {
   body {
     font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
     @apply bg-bgBody;
   }
 }
@@ -15,4 +17,25 @@
   background-image: url("./assets/img/elements/11.jpg");
   background-position: center;
   background-size: cover;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border: 1px solid pink;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: blueviolet;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: yellow;
 }

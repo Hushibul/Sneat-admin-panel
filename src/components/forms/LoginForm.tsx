@@ -39,7 +39,7 @@ const LoginForm = () => {
 
   const formSubmit = (data: any) => {
     data.email === loginData?.name && data.password === loginData?.password
-      ? navigate("/")
+      ? navigate("/dashboard")
       : setError("Username or Password Incorrect!");
     console.log(data);
 
@@ -75,7 +75,7 @@ const LoginForm = () => {
         />
         <BasicPassword
           label="Password"
-          placeholder="........."
+          placeholder="Enter your password"
           register={{
             ...register("password", {
               required: { value: true, message: "Password is required" },

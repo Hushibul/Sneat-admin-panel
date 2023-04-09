@@ -68,7 +68,10 @@ const AccountForm = () => {
                 onChange={handleImageChange}
               />
             </label>
-            <button className="px-6 py-3 bg-gray-600 ml-4 text-white rounded-md">
+            <button
+              onClick={() => setFiles(AvatarOne)}
+              className="px-6 py-3 bg-gray-600 ml-4 text-white rounded-md"
+            >
               Reset
             </button>
             <p className="text-gray-400 mt-4">
@@ -83,10 +86,11 @@ const AccountForm = () => {
               label="First Name"
               type="text"
               placeholder="Jhon"
-              {...register("firstname", {
-                required: { value: true, message: "Firstname is required" },
-              })}
-              register={{ ...register("firstname") }}
+              register={{
+                ...register("firstname", {
+                  required: { value: true, message: "Firstname is required" },
+                }),
+              }}
               error={errors.firstname?.message}
             />
           </div>
@@ -97,10 +101,11 @@ const AccountForm = () => {
               label="Last Name"
               type="text"
               placeholder="Doee"
-              {...register("lastname", {
-                required: { value: true, message: "Lastname is required" },
-              })}
-              register={{ ...register("lastname") }}
+              register={{
+                ...register("lastname", {
+                  required: { value: true, message: "Lastname is required" },
+                }),
+              }}
               error={errors.lastname?.message}
             />
           </div>
@@ -111,10 +116,11 @@ const AccountForm = () => {
               label="Email"
               type="email"
               placeholder="john.doe@example.com"
-              {...register("email", {
-                required: { value: true, message: "Email is required" },
-              })}
-              register={{ ...register("email") }}
+              register={{
+                ...register("email", {
+                  required: { value: true, message: "Email is required" },
+                }),
+              }}
               error={errors.email?.message}
             />
           </div>
@@ -125,10 +131,14 @@ const AccountForm = () => {
               label="Organization"
               type="text"
               placeholder="ThemeOragnization"
-              {...register("organization", {
-                required: { value: true, message: "Organization is required" },
-              })}
-              register={{ ...register("organization") }}
+              register={{
+                ...register("organization", {
+                  required: {
+                    value: true,
+                    message: "Organization is required",
+                  },
+                }),
+              }}
               error={errors.organization?.message}
             />
           </div>
@@ -139,10 +149,14 @@ const AccountForm = () => {
               label="Phone Number"
               type="text"
               placeholder=""
-              {...register("phonenumber", {
-                required: { value: true, message: "Phone Number is required" },
-              })}
-              register={{ ...register("phonenumber") }}
+              register={{
+                ...register("phonenumber", {
+                  required: {
+                    value: true,
+                    message: "Phone Number is required",
+                  },
+                }),
+              }}
               error={errors.phonenumber?.message}
             />
           </div>
@@ -153,10 +167,11 @@ const AccountForm = () => {
               label="Address"
               type="text"
               placeholder="ThemeOragnization"
-              {...register("address", {
-                required: { value: true, message: "Addressf is required" },
-              })}
-              register={{ ...register("address") }}
+              register={{
+                ...register("address", {
+                  required: { value: true, message: "Addressf is required" },
+                }),
+              }}
               error={errors.address?.message}
             />
           </div>
@@ -167,10 +182,11 @@ const AccountForm = () => {
               label="State"
               type="text"
               placeholder="California"
-              {...register("state", {
-                required: { value: true, message: "State is required" },
-              })}
-              register={{ ...register("state") }}
+              register={{
+                ...register("state", {
+                  required: { value: true, message: "State is required" },
+                }),
+              }}
               error={errors.state?.message}
             />
           </div>
@@ -181,10 +197,11 @@ const AccountForm = () => {
               label="Zip Code"
               type="text"
               placeholder="21923"
-              {...register("zipcode", {
-                required: { value: true, message: "zipcode is required" },
-              })}
-              register={{ ...register("zipcode") }}
+              register={{
+                ...register("zipcode", {
+                  required: { value: true, message: "zipcode is required" },
+                }),
+              }}
               error={errors.zipcode?.message}
             />
           </div>

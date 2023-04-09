@@ -4,6 +4,7 @@ import BasicButtonRounded from "../components/buttons/BasicButtonRounded";
 import OutlineButton from "../components/buttons/OutlineButton";
 import OutlineButtonRounded from "../components/buttons/OutlineButtonRounded";
 import ButtonImageGroup from "../components/buttons/ButtonImageGroup";
+import { Fragment } from "react";
 
 const Buttons = () => {
   return (
@@ -14,17 +15,21 @@ const Buttons = () => {
         <p className="text-secondary font-bold text-sm pt-6">Default</p>
         <div className="flex gap-3 items-center flex-wrap border-b py-6 border-b-secondary">
           {buttons.map((item) => (
-            <BasicButton name={item.name} color={item.color} />
+            <Fragment key={item.id}>
+              <BasicButton name={item.name} color={item.color} />
+            </Fragment>
           ))}
         </div>
         <p className="text-secondary font-bold text-sm pt-6">Rounded</p>
         <div className="flex gap-3 items-center flex-wrap py-6">
           {buttons.map((item) => (
-            <BasicButtonRounded
-              key={item?.id}
-              name={item?.name}
-              color={item?.color}
-            />
+            <Fragment key={item.id}>
+              <BasicButtonRounded
+                key={item?.id}
+                name={item?.name}
+                color={item?.color}
+              />
+            </Fragment>
           ))}
         </div>
       </div>
@@ -35,13 +40,17 @@ const Buttons = () => {
         <p className="text-secondary font-bold text-sm pt-6">Default</p>
         <div className="flex gap-3 items-center flex-wrap border-b py-6 border-b-secondary">
           {buttons.map((item) => (
-            <OutlineButton name={item.name} color={item.color} />
+            <Fragment key={item.id}>
+              <OutlineButton name={item.name} color={item.color} />
+            </Fragment>
           ))}
         </div>
         <p className="text-secondary font-bold text-sm pt-6">Rounded</p>
         <div className="flex gap-3 items-center flex-wrap py-6">
           {buttons.map((item) => (
-            <OutlineButtonRounded name={item.name} color={item.color} />
+            <Fragment key={item.id}>
+              <OutlineButtonRounded name={item.name} color={item.color} />
+            </Fragment>
           ))}
         </div>
       </div>

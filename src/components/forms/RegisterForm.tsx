@@ -40,10 +40,11 @@ const RegisterForm = () => {
           label="Username"
           type="text"
           placeholder="Enter your username"
-          {...register("username", {
-            required: { value: true, message: "Username is required" },
-          })}
-          register={{ ...register("username") }}
+          register={{
+            ...register("username", {
+              required: { value: true, message: "Username is required" },
+            }),
+          }}
           error={errors.username?.message}
         />
 
@@ -51,20 +52,22 @@ const RegisterForm = () => {
           label="Email"
           type="email"
           placeholder="Enter your email "
-          {...register("email", {
-            required: { value: true, message: "Email is required" },
-          })}
-          register={{ ...register("email") }}
+          register={{
+            ...register("email", {
+              required: { value: true, message: "Email is required" },
+            }),
+          }}
           error={errors.email?.message}
         />
 
         <BasicPassword
           label="Password"
           placeholder="........."
-          {...register("password", {
-            required: { value: true, message: "Password is required" },
-          })}
-          register={{ ...register("password") }}
+          register={{
+            ...register("password", {
+              required: { value: true, message: "Password is required" },
+            }),
+          }}
           error={errors.password?.message}
         />
         <div className="flex items-center gap-3">

@@ -2,7 +2,7 @@ import { footerMenu } from "../../assets/constants/constant";
 
 const Footer = () => {
   return (
-    <div className="sticky bottom-0 left-0 z-[-10] text-textMain px-6 flex flex-col justify-between md:flex-row">
+    <div className="mb-3 mt-auto z-[-10] text-textMain px-6 flex flex-col justify-between md:flex-row">
       <span className="text-center md:text-left">
         © 2023 , made with ❤️ by{" "}
         <span className="font-extrabold">ThemeSelection</span>

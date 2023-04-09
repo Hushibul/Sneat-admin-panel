@@ -9,17 +9,17 @@ export const accountsetting = [
   {
     id: 1,
     name: "Account",
-    path: "/account",
+    path: "/dashboard/account",
   },
   {
     id: 2,
     name: "Notification",
-    path: "/notification",
+    path: "/dashboard/notification",
   },
   {
     id: 3,
     name: "Connection",
-    path: "/connection",
+    path: "/dashboard/connection",
   },
 ];
 
@@ -45,12 +45,12 @@ export const misc = [
   {
     id: 1,
     name: "Error",
-    path: "/error",
+    path: "/dashboard/error",
   },
   {
     id: 2,
     name: "Under Maintainance",
-    path: "/under-maintainance",
+    path: "/dashboard/under-maintainance",
   },
 ];
 
@@ -58,92 +58,92 @@ export const userInterface = [
   {
     id: 1,
     name: "Accordion",
-    path: "/accordions",
+    path: "/dashboard/accordions",
   },
   {
     id: 2,
     name: "Alerts",
-    path: "/alerts",
+    path: "/dashboard/alerts",
   },
   {
     id: 3,
     name: "Badges",
-    path: "/badges",
+    path: "/dashboard/badges",
   },
   {
     id: 4,
     name: "Buttons",
-    path: "/buttons",
+    path: "/dashboard/buttons",
   },
   {
     id: 5,
     name: "Carousel",
-    path: "/carousel",
+    path: "/dashboard/carousel",
   },
   {
     id: 6,
     name: "Cards",
-    path: "/cards",
+    path: "/dashboard/cards",
   },
   {
     id: 7,
     name: "Collapse",
-    path: "/collapse",
+    path: "/dashboard/collapse",
   },
   {
     id: 8,
     name: "Dropdown",
-    path: "/dropdown",
+    path: "/dashboard/dropdown",
   },
   {
     id: 9,
     name: "Footer",
-    path: "/footer",
+    path: "/dashboard/footer",
   },
   {
     id: 10,
     name: "List groups",
-    path: "/list-groups",
+    path: "/dashboard/list-groups",
   },
   {
     id: 11,
     name: "Modals",
-    path: "/modals",
+    path: "/dashboard/modals",
   },
   {
     id: 12,
     name: "Navbar",
-    path: "/navbar",
+    path: "/dashboard/navbar",
   },
   {
     id: 13,
     name: "Offcanvas",
-    path: "/offcanvas",
+    path: "/dashboard/offcanvas",
   },
   {
     id: 14,
     name: "Spinners",
-    path: "/spinners",
+    path: "/dashboard/spinners",
   },
   {
     id: 15,
     name: "Tabs & Pills",
-    path: "/tabs",
+    path: "/dashboard/tabs",
   },
   {
     id: 16,
     name: "Toasts",
-    path: "/toasts",
+    path: "/dashboard/toasts",
   },
   {
     id: 17,
     name: "Tooltips & Popovers",
-    path: "/tooltips",
+    path: "/dashboard/tooltips",
   },
   {
     id: 18,
     name: "Typography",
-    path: "/typography",
+    path: "/dashboard/typography",
   },
 ];
 
