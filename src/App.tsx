@@ -22,6 +22,7 @@ import Carousal from "./pages/Carousals";
 import Footer from "./pages/Footer";
 import PrivateRoutes from "./routes/PrivateRoute";
 import Collapse from "./pages/Collapse";
+import Offcanvas from "./pages/Offcanvas";
 
 function App() {
   const router = createBrowserRouter(
@@ -45,6 +46,7 @@ function App() {
             <Route path="carousel" element={<Carousal />} />
             <Route path="footer" element={<Footer />} />
             <Route path="collapse" element={<Collapse />} />
+            <Route path="offcanvas" element={<Offcanvas />} />
           </Route>
         </Route>
       </>
