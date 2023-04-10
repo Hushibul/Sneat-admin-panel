@@ -89,7 +89,7 @@ const RegisterForm = () => {
         </button>
         <p className="text-textMain pt-4 pb-6 text-center">
           Already have an accout?
-          <Link className="text-primary ml-1" to="/">
+          <Link className="text-primary ml-1" to="/login">
             Sign in instead
           </Link>{" "}
         </p>

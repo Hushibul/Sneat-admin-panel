@@ -23,6 +23,8 @@ import Footer from "./pages/Footer";
 import PrivateRoutes from "./routes/PrivateRoute";
 import Collapse from "./pages/Collapse";
 import Offcanvas from "./pages/Offcanvas";
+import DropDown from "./pages/DropDown";
+import Modals from "./pages/Modals";
 
 function App() {
   const router = createBrowserRouter(
@@ -47,6 +49,8 @@ function App() {
             <Route path="footer" element={<Footer />} />
             <Route path="collapse" element={<Collapse />} />
             <Route path="offcanvas" element={<Offcanvas />} />
+            <Route path="dropdown" element={<DropDown />} />
+            <Route path="modals" element={<Modals />} />
           </Route>
         </Route>
       </>
