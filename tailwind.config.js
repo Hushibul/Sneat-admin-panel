@@ -24,6 +24,15 @@ module.exports = {
         xl: "1200px",
         xxl: "1400px",
       },
+      animation: {
+        "waving-hand": "wave 1s linear infinite",
+      },
+      keyframes: {
+        wave: {
+          "0%, 100%": { opacity: "100" },
+          "50%": { opacity: "0" },
+        },
+      },
     },
   },
   plugins: [],

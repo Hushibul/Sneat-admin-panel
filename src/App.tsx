@@ -25,6 +25,9 @@ import Collapse from "./pages/Collapse";
 import Offcanvas from "./pages/Offcanvas";
 import DropDown from "./pages/DropDown";
 import Modals from "./pages/Modals";
+import Spinners from "./pages/Spinners";
+import Tabs from "./pages/Tabs";
+import ToolTip from "./pages/ToolTip";
 
 function App() {
   const router = createBrowserRouter(
@@ -51,6 +54,9 @@ function App() {
             <Route path="offcanvas" element={<Offcanvas />} />
             <Route path="dropdown" element={<DropDown />} />
             <Route path="modals" element={<Modals />} />
+            <Route path="spinners" element={<Spinners />} />
+            <Route path="tabs" element={<Tabs />} />
+            <Route path="tooltips" element={<ToolTip />} />
           </Route>
         </Route>
       </>

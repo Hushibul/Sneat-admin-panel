@@ -35,7 +35,7 @@ const Dummy = () => {
       <button className="bg-indigo-100 border border-indigo-100 text-dark hover:bg-indigo-100">
         Dark
       </button>
-      <button className="bg-indigo-100 border border-indigo-100 text-warning hover:bg-indigo-100">
+      <button className="bg-indigo-100 border text-5xl border-indigo-100 text-warning hover:bg-indigo-100">
         Warning
       </button>
     </div>

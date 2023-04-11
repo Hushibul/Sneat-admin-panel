@@ -1,19 +1,34 @@
-import ModalBody from "../components/modal/ModalBody";
+import CenteredModal from "../components/modal/CenteredModal";
+import DefaultModal from "../components/modal/DefaultModal";
 import ModalDefaultForm from "../components/modal/ModalDefaultForm";
 import { useState } from "react";
+import SlideTopModal from "../components/modal/SlideTopModal";
+import YoutubeModal from "../components/modal/YoutubeModal";
+import ToggleModal from "../components/modal/ToggleModal";
+import FullScreenModal from "../components/modal/FullScreenModal";
+import SmallModal from "../components/modal/SmallModal";
+import LargeModal from "../components/modal/LargeModal";
+import ExtraLargeModal from "../components/modal/ExtraLargeModal";
 
 const Modals = () => {
   const [openDefaultModal, setOpenDefaultModal] = useState(false);
-  const closeModal = () => {
-    setOpenDefaultModal(false);
-  };
+  const [openCenteredModal, setOpenCenteredModal] = useState(false);
+  const [openSlideTop, setOpenSlideTop] = useState(false);
+  const [openYoutubeModal, setOpenYoutubeModal] = useState(false);
+  const [openToggleModal, setOpenToggleModal] = useState(false);
+  const [openFullScreenModal, setOpenFullScreenModal] = useState(false);
+  const [openSmallModal, setOpenSmallModal] = useState(false);
+  const [openLargeModal, setOpenLargeModal] = useState(false);
+  const [openExtraLargeModal, setOpenExtraLargeModal] = useState(false);
+
   return (
     <div className="mx-2 md:mx-6 xl:ml-5">
       <div className="rounded-md p-5 bg-white shadow-md border-b border-b-gray-300">
         <h2 className="text-xl text-textMain">Modals</h2>
 
-        <div className="mt-5 flex items-center justify-between">
-          <div>
+        {/* Modal Toggle  */}
+        <div className="mt-5 grid grid-cols-12">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <p className="text-gray-400 text-sm mb-4">Default</p>
             <button
               onClick={() => setOpenDefaultModal(true)}
@@ -22,57 +37,81 @@ const Modals = () => {
               Launch modal
             </button>
           </div>
-          <div>
+          <div className="col-span-12 md:col-span-6 mt-3 md:mt-0 lg:col-span-4">
             <p className="text-gray-400 text-sm mb-4">Vertically Centered</p>
-            <button className="px-4 py-2 text-white bg-primary rounded shadow">
+            <button
+              onClick={() => setOpenCenteredModal(true)}
+              className="px-4 py-2 text-white bg-primary rounded shadow"
+            >
               Launch modal
             </button>
           </div>
-          <div className="mr-40">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 mt-6 lg:mr-40 lg:mt-0">
             <p className="text-gray-400 text-sm mb-4">Slide from top</p>
-            <button className="px-4 py-2 text-white bg-primary rounded shadow">
+            <button
+              onClick={() => setOpenSlideTop(true)}
+              className="px-4 py-2 text-white bg-primary rounded shadow"
+            >
               Launch modal
             </button>
           </div>
         </div>
 
-        <div className="mt-10 flex items-center justify-between">
-          <div>
+        <div className="mt-10 grid grid-cols-12">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <p className="text-gray-400 text-sm mb-4">Youtube Video</p>
-            <button className="px-4 py-2 text-white bg-primary rounded shadow">
+            <button
+              onClick={() => setOpenYoutubeModal(true)}
+              className="px-4 py-2 text-white bg-primary rounded shadow"
+            >
               Launch modal
             </button>
           </div>
-          <div>
+          <div className="col-span-12 mt-3 md:mt-0 md:col-span-6 lg:col-span-4">
             <p className="text-gray-400 text-sm mb-4">Toggle between Modals</p>
-            <button className="px-4 py-2 text-white bg-primary rounded shadow">
+            <button
+              onClick={() => setOpenToggleModal(true)}
+              className="px-4 py-2 text-white bg-primary rounded shadow"
+            >
               Launch modal
             </button>
           </div>
-          <div className="mr-40">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 mt-6 lg:mr-40 lg:mt-0">
             <p className="text-gray-400 text-sm mb-4">Fullscreen</p>
-            <button className="px-4 py-2 text-white bg-primary rounded shadow">
+            <button
+              onClick={() => setOpenFullScreenModal(true)}
+              className="px-4 py-2 text-white bg-primary rounded shadow"
+            >
               Launch modal
             </button>
           </div>
         </div>
 
-        <div className="mt-10 flex items-center justify-between">
-          <div>
+        <div className="mt-10 grid grid-cols-12">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <p className="text-gray-400 text-sm mb-4">Sizes</p>
-            <div className="flex gap-3">
-              <button className="px-4 py-2 text-white bg-primary rounded shadow">
+            <div className="flex gap-3 flex-wrap">
+              <button
+                onClick={() => setOpenSmallModal(true)}
+                className="px-4 py-2 text-white bg-primary rounded shadow"
+              >
                 Small
               </button>
-              <button className="px-4 py-2 text-white bg-primary rounded shadow">
+              <button
+                onClick={() => setOpenLargeModal(true)}
+                className="px-4 py-2 text-white bg-primary rounded shadow"
+              >
                 Large
               </button>
-              <button className="px-4 py-2 text-white bg-primary rounded shadow">
-                Medium
+              <button
+                onClick={() => setOpenExtraLargeModal(true)}
+                className="px-4 py-2 text-white bg-primary rounded shadow"
+              >
+                Extra Large
               </button>
             </div>
           </div>
-          <div>
+          <div className="col-span-12 mt-3 md:mt-0 md:col-span-6 lg:col-span-4">
             <p className="text-gray-400 text-sm mb-4">Scrolling long content</p>
             <div className="flex gap-3">
               <button className="px-4 py-2 text-white bg-primary rounded shadow">
@@ -83,9 +122,12 @@ const Modals = () => {
               </button>
             </div>
           </div>
-          <div className="mr-40">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 mt-6 lg:mr-40 lg:mt-0">
             <p className="text-gray-400 text-sm mb-4">Backdrop</p>
-            <button className="px-4 py-2 text-white bg-primary rounded shadow">
+            <button
+              onClick={() => setOpenDefaultModal(true)}
+              className="px-4 py-2 text-white bg-primary rounded shadow"
+            >
               Launch modal
             </button>
           </div>
@@ -93,19 +135,62 @@ const Modals = () => {
       </div>
 
       {/* Modals  */}
-      <ModalBody
+      <DefaultModal
         openDefaultModal={openDefaultModal}
         setOpenDefaultModal={setOpenDefaultModal}
       >
         <ModalDefaultForm />
-      </ModalBody>
+      </DefaultModal>
 
-      <div
-        onClick={closeModal}
-        className={`absolute top-0 left-0 bottom-0 right-0 cursor-pointer opacity-25 bg-gray-400 ${
-          openDefaultModal ? "block" : "hidden"
-        }`}
-      ></div>
+      <CenteredModal
+        openCenteredModal={openCenteredModal}
+        setOpenCenteredModal={setOpenCenteredModal}
+      >
+        <ModalDefaultForm />
+      </CenteredModal>
+
+      <SlideTopModal
+        openSlideTop={openSlideTop}
+        setOpenSlideTop={setOpenSlideTop}
+      >
+        <ModalDefaultForm />
+      </SlideTopModal>
+
+      <YoutubeModal
+        openYoutubeModal={openYoutubeModal}
+        setOpenYoutubeModal={setOpenYoutubeModal}
+      />
+
+      <ToggleModal
+        openToggleModal={openToggleModal}
+        setOpenToggleModal={setOpenToggleModal}
+      />
+
+      <FullScreenModal
+        openFullScreenModal={openFullScreenModal}
+        setOpenFullScreenModal={setOpenFullScreenModal}
+      />
+
+      <SmallModal
+        openSmallModal={openSmallModal}
+        setOpenSmallModal={setOpenSmallModal}
+      >
+        <ModalDefaultForm />
+      </SmallModal>
+
+      <LargeModal
+        openLargeModal={openLargeModal}
+        setOpenLargeModal={openLargeModal}
+      >
+        <ModalDefaultForm />
+      </LargeModal>
+
+      <ExtraLargeModal
+        openExtraLargeModal={openExtraLargeModal}
+        setOpenExtraLargeModal={setOpenExtraLargeModal}
+      >
+        <ModalDefaultForm />
+      </ExtraLargeModal>
     </div>
   );
 };

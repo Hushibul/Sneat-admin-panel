@@ -22,7 +22,7 @@ const VariantDrop = ({ children, rounded = false }: any) => {
     <div className="relative dropdown">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={` flex gap-2 items-center text-white bg-primary  hover:translate-y-[-1px] hover:shadow-md duration-300 ${
+        className={` flex gap-2 items-center text-white bg-primary hover:translate-y-[-1px] hover:shadow-md duration-300 ${
           rounded ? "rounded-full p-4" : "rounded px-6 py-2"
         }`}
       >

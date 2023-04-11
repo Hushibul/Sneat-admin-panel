@@ -109,7 +109,7 @@ const Navbar = () => {
       {/* Navmenu  */}
       <div
         onBlur={() => setOpenMenu(false)}
-        className={`bg-white w-64 fixed top-0 left-0 h-screen pl-8 overflow-y-scroll transition-all duration-150 shadow-lg translate-x-[-300px] xl:shadow-none xl:translate-x-0 ${
+        className={`bg-white w-64 fixed top-0 left-0 h-screen pl-8 z-50 overflow-y-scroll transition-all duration-150 shadow-lg translate-x-[-300px] xl:shadow-none xl:translate-x-0 ${
           openMenu ? "translate-x-[0px]" : "translate-x-[-300px]"
         }  `}
       >

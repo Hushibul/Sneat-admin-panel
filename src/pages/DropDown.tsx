@@ -42,7 +42,7 @@ const DropDown = () => {
         </div>
 
         {/* Variant Button  */}
-        <div className="flex space-x-20 mt-8">
+        <div className="flex space-x-1 md:space-x-20 flex-wrap mt-8">
           <div>
             <p className="text-gray-400 text-sm mb-4">Hidden Arrow</p>
             <VariantDrop>

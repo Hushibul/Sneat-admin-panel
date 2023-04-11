@@ -62,15 +62,20 @@ const ModalDefaultForm = () => {
           </div>
         </div>
 
-        <button className="bg-transparent text-secondary ml-auto mr-4 rounded-md border border-gray-400 px-4 py-2 hover:bg-secondary hover:text-white">
-          Close
-        </button>
-        <button
-          type="submit"
-          className="bg-primary px-4 py-2 text-white rounded-md hover:translate-y-[-1px]"
-        >
-          Save Change
-        </button>
+        <div className="float-right">
+          <button
+            disabled
+            className="bg-transparent text-secondary cursor-pointer ml-auto mr-4 rounded-md border border-gray-400 px-4 py-2 hover:bg-secondary hover:text-white"
+          >
+            Close
+          </button>
+          <button
+            type="submit"
+            className="bg-primary px-4 py-2 text-white rounded-md hover:translate-y-[-1px]"
+          >
+            Save Change
+          </button>
+        </div>
       </form>
     </div>
   );
