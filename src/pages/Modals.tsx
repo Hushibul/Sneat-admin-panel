@@ -1,4 +1,12 @@
+import ModalBody from "../components/modal/ModalBody";
+import ModalDefaultForm from "../components/modal/ModalDefaultForm";
+import { useState } from "react";
+
 const Modals = () => {
+  const [openDefaultModal, setOpenDefaultModal] = useState(false);
+  const closeModal = () => {
+    setOpenDefaultModal(false);
+  };
   return (
     <div className="mx-2 md:mx-6 xl:ml-5">
       <div className="rounded-md p-5 bg-white shadow-md border-b border-b-gray-300">
@@ -7,7 +15,10 @@ const Modals = () => {
         <div className="mt-5 flex items-center justify-between">
           <div>
             <p className="text-gray-400 text-sm mb-4">Default</p>
-            <button className="px-4 py-2 text-white bg-primary rounded shadow">
+            <button
+              onClick={() => setOpenDefaultModal(true)}
+              className="px-4 py-2 text-white bg-primary rounded shadow"
+            >
               Launch modal
             </button>
           </div>
@@ -80,6 +91,21 @@ const Modals = () => {
           </div>
         </div>
       </div>
+
+      {/* Modals  */}
+      <ModalBody
+        openDefaultModal={openDefaultModal}
+        setOpenDefaultModal={setOpenDefaultModal}
+      >
+        <ModalDefaultForm />
+      </ModalBody>
+
+      <div
+        onClick={closeModal}
+        className={`absolute top-0 left-0 bottom-0 right-0 cursor-pointer opacity-25 bg-gray-400 ${
+          openDefaultModal ? "block" : "hidden"
+        }`}
+      ></div>
     </div>
   );
 };
