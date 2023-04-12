@@ -28,7 +28,6 @@ const BasicDrop = ({ name, color }: any) => {
       </button>
 
       <ul
-        onBlur={() => setIsOpen(false)}
         className={`bg-white absolute w-48 top-14 z-30 left-0 rounded-md shadow-md ${
           isOpen ? "block" : "hidden"
         }`}

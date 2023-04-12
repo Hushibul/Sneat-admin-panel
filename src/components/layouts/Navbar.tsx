@@ -27,6 +27,7 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [openProfile, setOpenProfile] = useState<boolean>(false);
   const [openAccount, setOpenAccount] = useState<boolean>(false);
+  const [openAuth, setOpenAuth] = useState<boolean>(false);
   const [openMisc, setOpenMisc] = useState<boolean>(false);
 
   const { loginData } = useContext(AuthContext);

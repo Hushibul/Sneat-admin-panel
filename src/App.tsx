@@ -29,6 +29,7 @@ import Spinners from "./pages/Spinners";
 import Tabs from "./pages/Tabs";
 import ToolTips from "./pages/ToolTips";
 import Navbars from "./pages/Navbars";
+import Toasts from "./pages/Toasts";
 
 function App() {
   const router = createBrowserRouter(
@@ -59,6 +60,7 @@ function App() {
             <Route path="tabs" element={<Tabs />} />
             <Route path="tooltips" element={<ToolTips />} />
             <Route path="navbar" element={<Navbars />} />
+            <Route path="toasts" element={<Toasts />} />
           </Route>
         </Route>
       </>
