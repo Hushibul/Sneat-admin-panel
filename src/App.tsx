@@ -27,7 +27,8 @@ import DropDown from "./pages/DropDown";
 import Modals from "./pages/Modals";
 import Spinners from "./pages/Spinners";
 import Tabs from "./pages/Tabs";
-import ToolTip from "./pages/ToolTip";
+import ToolTips from "./pages/ToolTips";
+import Navbars from "./pages/Navbars";
 
 function App() {
   const router = createBrowserRouter(
@@ -56,7 +57,8 @@ function App() {
             <Route path="modals" element={<Modals />} />
             <Route path="spinners" element={<Spinners />} />
             <Route path="tabs" element={<Tabs />} />
-            <Route path="tooltips" element={<ToolTip />} />
+            <Route path="tooltips" element={<ToolTips />} />
+            <Route path="navbar" element={<Navbars />} />
           </Route>
         </Route>
       </>
