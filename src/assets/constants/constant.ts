@@ -451,6 +451,92 @@ export const optionsCurrency = [
   },
 ];
 
+export const toastPlacements = [
+  {
+    id: 1,
+    value: "topleft",
+    name: "Top Left",
+  },
+  {
+    id: 2,
+    value: "topcenter",
+    name: "Top Center",
+  },
+  {
+    id: 3,
+    value: "topright",
+    name: "Top Right",
+  },
+  {
+    id: 4,
+    value: "middleleft",
+    name: "Middle Left",
+  },
+  {
+    id: 5,
+    value: "middlecenter",
+    name: "Middle Center",
+  },
+  {
+    id: 6,
+    value: "middleright",
+    name: "Middle Right",
+  },
+  {
+    id: 7,
+    value: "bottomleft",
+    name: "Bottom Left",
+  },
+  {
+    id: 8,
+    value: "bottomcenter",
+    name: "Bottom Center",
+  },
+  {
+    id: 9,
+    value: "bottomright",
+    name: "Bottom Right",
+  },
+];
+
+export const toastColors = [
+  {
+    id: 1,
+    value: "primary",
+    name: "Primary",
+  },
+  {
+    id: 2,
+    value: "secondary",
+    name: "Secondary",
+  },
+  {
+    id: 3,
+    value: "success",
+    name: "Success",
+  },
+  {
+    id: 4,
+    value: "danger",
+    name: "Danger",
+  },
+  {
+    id: 5,
+    value: "warning",
+    name: "Warning",
+  },
+  {
+    id: 6,
+    value: "info",
+    name: "Info",
+  },
+  {
+    id: 7,
+    value: "dark",
+    name: "Dark",
+  },
+];
+
 export const modalContents = [
   "Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
   "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
