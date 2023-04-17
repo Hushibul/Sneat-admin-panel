@@ -7,7 +7,7 @@ const Tooltip = () => {
       <p className="text-gray-400 mt-6 mb-4">Direactons</p>
 
       <div className="grid grid-cols-12">
-        <div className="col-span-6 md:col-span-3 relative">
+        <div className="col-span-6  mb-2 md:mb-0 md:col-span-3 relative">
           <button className="bg-primary text-white px-4 py-2 rounded-md group">
             Right
             <div className="absolute top-[2px] left-[75px] px-2 py-1 z-20 bg-slate-800 rounded-md text-white hidden group-hover:block">
@@ -15,7 +15,7 @@ const Tooltip = () => {
             </div>
           </button>
         </div>
-        <div className="col-span-6 md:col-span-3 relative">
+        <div className="col-span-6 mb-2 md:mb-0 md:col-span-3 relative">
           <button className="bg-primary text-white px-4 py-2 rounded-md group group-hover:">
             Top
             <div className="absolute top-[-35px] left-[-10%] px-2 py-1 z-20 bg-slate-800 rounded-md text-white hidden group-hover:block">

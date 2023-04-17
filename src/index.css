@@ -27,15 +27,14 @@
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border: 1px solid pink;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: blueviolet;
+  background: rgb(215, 205, 205);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: yellow;
+  background: rgb(220, 197, 197);
 }

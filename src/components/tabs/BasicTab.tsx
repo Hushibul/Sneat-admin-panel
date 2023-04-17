@@ -5,7 +5,7 @@ const BasicTab = () => {
   const [index, setIndex] = useState(0);
   return (
     <div className="rounded-md shadow-md">
-      <div className="flex gap-1 rounded-md overflow-hidden">
+      <div className="flex gap-1 flex-wrap rounded-md overflow-hidden">
         <button
           onClick={() => setIndex(0)}
           className={`px-4 py-2 text-textMain ${

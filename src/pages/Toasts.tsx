@@ -49,6 +49,7 @@ const Toasts = () => {
                 >
                   {toastColors.map((item) => (
                     <option
+                      key={item.id}
                       className="text-textMain checked:text-textMain"
                       value={item.value}
                     >

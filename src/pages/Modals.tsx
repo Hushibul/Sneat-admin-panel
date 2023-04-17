@@ -180,7 +180,7 @@ const Modals = () => {
 
       <LargeModal
         openLargeModal={openLargeModal}
-        setOpenLargeModal={openLargeModal}
+        setOpenLargeModal={setOpenLargeModal}
       >
         <ModalDefaultForm />
       </LargeModal>

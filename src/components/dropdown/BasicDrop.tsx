@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 
 const BasicDrop = ({ name, color }: any) => {

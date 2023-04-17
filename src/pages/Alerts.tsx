@@ -1,6 +1,7 @@
 import { alertsItem } from "../assets/constants/constant";
 import BasicAlert from "../components/alert/BasicAlert";
 import DismissibleAlert from "../components/alert/DisassambleAlert";
+import { Fragment } from "react";
 
 const Alerts = () => {
   return (
@@ -11,10 +12,12 @@ const Alerts = () => {
             Basic Alerts
           </h2>
           {alertsItem.map((item) => (
-            <BasicAlert
-              textColor={item.textColor}
-              background={item.background}
-            />
+            <Fragment key={item.id}>
+              <BasicAlert
+                textColor={item.textColor}
+                background={item.background}
+              />
+            </Fragment>
           ))}
         </div>
         <div className="col-span-12 shadow h-fit  px-5 rounded-md py-5 bg-white md:col-span-6">
@@ -24,10 +27,12 @@ const Alerts = () => {
             </h2>
 
             {alertsItem.map((item) => (
-              <DismissibleAlert
-                textColor={item.textColor}
-                background={item.background}
-              />
+              <Fragment>
+                <DismissibleAlert
+                  textColor={item.textColor}
+                  background={item.background}
+                />
+              </Fragment>
             ))}
           </div>
         </div>

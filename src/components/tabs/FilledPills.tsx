@@ -11,7 +11,7 @@ const FilledPills = () => {
       <div className="grid grid-cols-12 gap-1 rounded-md overflow-hidden">
         <button
           onClick={() => setIndex(0)}
-          className={`col-span-4 py-2 px-4 lg:px-16 flex items-center gap-2 rounded ${
+          className={`col-span-12 md:col-span-4 py-2 px-4 lg:px-16 flex items-center gap-2 rounded ${
             index === 0
               ? "bg-primary text-white"
               : "bg-transparent text-textMain"
@@ -22,7 +22,7 @@ const FilledPills = () => {
         </button>
         <button
           onClick={() => setIndex(1)}
-          className={`px-4 lg:px-16 col-span-4 py-2 flex items-center gap-2 rounded ${
+          className={`px-4 lg:px-16 col-span-12 md:col-span-4 py-2 flex items-center gap-2 rounded ${
             index === 1
               ? "bg-primary text-white"
               : "bg-transparent text-textMain"
@@ -32,7 +32,7 @@ const FilledPills = () => {
         </button>
         <button
           onClick={() => setIndex(2)}
-          className={`px-4 lg:px-16 col-span-4 py-2 flex items-center gap-2 rounded ${
+          className={`px-4 lg:px-16 col-span-12 md:col-span-4 py-2 flex items-center gap-2 rounded ${
             index === 2
               ? "bg-primary text-white"
               : "bg-transparent text-textMain"

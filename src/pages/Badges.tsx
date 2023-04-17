@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { alertsItem, buttons } from "../assets/constants/constant";
 import BadgeNumber from "../components/badges/BadgeNumber";
 import BadgeNumberRounded from "../components/badges/BadgeNumberRounded";
@@ -20,7 +21,9 @@ const Badges = () => {
             <p className="text-gray-400 text-sm mb-3 font-bold">Defaults</p>
             <div className="flex flex-wrap gap-2">
               {buttons.map((item) => (
-                <BasicBadge color={item.color} />
+                <Fragment key={item.id}>
+                  <BasicBadge color={item.color} />
+                </Fragment>
               ))}
             </div>
           </div>
@@ -29,7 +32,9 @@ const Badges = () => {
             <div className="flex flex-wrap gap-2">
               {" "}
               {buttons.map((item) => (
-                <BasicBadgeRounded color={item.color} />
+                <Fragment key={item.id}>
+                  <BasicBadgeRounded color={item.color} />
+                </Fragment>
               ))}
             </div>
           </div>
@@ -45,10 +50,12 @@ const Badges = () => {
               </p>
               <div className="flex flex-wrap gap-2">
                 {alertsItem.map((item) => (
-                  <LabelBadges
-                    textColor={item.textColor}
-                    background={item.background}
-                  />
+                  <Fragment key={item.id}>
+                    <LabelBadges
+                      textColor={item.textColor}
+                      background={item.background}
+                    />
+                  </Fragment>
                 ))}
               </div>
             </div>
@@ -58,10 +65,12 @@ const Badges = () => {
               </p>
               <div className="flex flex-wrap gap-2">
                 {alertsItem.map((item) => (
-                  <LabelBadgesRounded
-                    textColor={item.textColor}
-                    background={item.background}
-                  />
+                  <Fragment key={item.id}>
+                    <LabelBadgesRounded
+                      textColor={item.textColor}
+                      background={item.background}
+                    />
+                  </Fragment>
                 ))}
               </div>
             </div>

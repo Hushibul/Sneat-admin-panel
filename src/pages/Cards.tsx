@@ -25,12 +25,18 @@ const Cards = () => {
       <h2 className="text-secondary my-6 text-lg font-bold">Styled Variant</h2>
       <div className="grid grid-cols-12">
         {cardsColor.map((item) => (
-          <div className="col-span-12 md:col-span-6 lg:col-span-4 mb-6 md:mr-6">
+          <div
+            key={item.id}
+            className="col-span-12 md:col-span-6 lg:col-span-4 mb-6 md:mr-6"
+          >
             <ColorCard color={item.color} name={item.name} />
           </div>
         ))}
         {cardsColor.map((item) => (
-          <div className="col-span-12 md:col-span-6 lg:col-span-4 mb-6 md:mr-6">
+          <div
+            key={item.id}
+            className="col-span-12 md:col-span-6 lg:col-span-4 mb-6 md:mr-6"
+          >
             <OutlinedCard color={item.color} name={item.name} />
           </div>
         ))}

@@ -6,11 +6,13 @@ import {
   MdPowerSettingsNew,
 } from "react-icons/md";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
-import { BsCreditCard2Back } from "react-icons/bs";
+import { BsCreditCard2Back, BsBoxSeam } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
+import { HiOutlineCube } from "react-icons/hi";
+import { FiUnlock } from "react-icons/fi";
 
 import { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import AvatarOne from "../../assets/img/avatars/1.png";
 import BrandLogo from "../../assets/img/icons/brands/logo.svg";
@@ -29,6 +31,7 @@ const Navbar = () => {
   const [openAccount, setOpenAccount] = useState<boolean>(false);
   const [openAuth, setOpenAuth] = useState<boolean>(false);
   const [openMisc, setOpenMisc] = useState<boolean>(false);
+  const [openUI, setOpenUI] = useState<boolean>(false);
 
   const { loginData } = useContext(AuthContext);
 
@@ -75,34 +78,34 @@ const Navbar = () => {
             </div>
           </div>
           <div className="pl-4">
-            <Link
+            <NavLink
               className="py-3 flex items-center text-textMain gap-3"
               to={"#"}
             >
               <CgProfile />
               My Profile
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               className="py-3 flex items-center text-textMain gap-3"
               to={"#"}
             >
               <AiOutlineSetting />
               Settings
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               className="py-3 flex items-center text-textMain gap-3"
               to={"#"}
             >
               <BsCreditCard2Back />
               Billling
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               className="pb-3 pt-5 border-t border-t-gray-300 flex items-center text-textMain gap-3"
               to={"/login"}
             >
               <MdPowerSettingsNew />
               Log Out
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -110,7 +113,7 @@ const Navbar = () => {
       {/* Navmenu  */}
       <div
         onBlur={() => setOpenMenu(false)}
-        className={`bg-white w-64 fixed top-0 left-0 h-screen pl-8 z-50 overflow-y-scroll transition-all duration-150 shadow-lg translate-x-[-300px] xl:shadow-none xl:translate-x-0 ${
+        className={`bg-white w-64 fixed top-0 left-0 h-screen pl-8 z-30 overflow-y-scroll transition-all duration-150 shadow-lg translate-x-[-300px] xl:shadow-none xl:translate-x-0 ${
           openMenu ? "translate-x-[0px]" : "translate-x-[-300px]"
         }  `}
       >
@@ -119,7 +122,7 @@ const Navbar = () => {
           <h2 className="text-2xl font-extrabold text-textMain">Sneat</h2>
           <div
             onClick={() => setOpenMenu(false)}
-            className="bg-white rounded-full z-50 fixed top-6 right-0"
+            className="bg-white rounded-full z-40 fixed top-6 right-0"
           >
             <IoIosArrowDropleftCircle
               className="text-primary cursor-pointer xl:hidden"
@@ -129,12 +132,12 @@ const Navbar = () => {
         </div>
 
         {/* DashBoard  */}
-        <Link
-          className=" text-textMain flex items-center gap-3 font-bold"
+        <NavLink
+          className="text-textMain flex items-center gap-3 font-bold"
           to="/dashboard"
         >
           <AiOutlineHome size={20} className="inline" /> Dashboard
-        </Link>
+        </NavLink>
 
         <div className="mt-4">
           <span className="text-textMain uppercase text-sm">Pages</span>
@@ -150,32 +153,39 @@ const Navbar = () => {
             </div>
           </div>
           <ul
-            className={`bg-white rounded-md text-textMain pl-10 font-bold ${
+            className={`bg-white list-disc rounded-md text-textMain pl-10 font-bold ${
               openAccount ? "block" : "hidden"
             }`}
           >
             {accountsetting.map((item) => (
               <li key={item.id} className="mt-4">
-                <Link className="list-disc" to={item.path}>
+                <NavLink className="" to={item.path}>
                   {item.name}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
 
           {/* Authentication  */}
-          <div className="text-textMain mt-4 flex items-center gap-3 font-bold group cursor-pointer">
-            <MdManageAccounts size={20} /> <span>Authentication</span>{" "}
+          <div
+            onClick={() => setOpenAuth(!openAuth)}
+            className="text-textMain mt-4 flex items-center gap-3 font-bold group cursor-pointer"
+          >
+            <FiUnlock size={20} /> <span>Authentication</span>{" "}
             <div className="group-focus:rotate-90">
               <MdOutlineKeyboardArrowRight size={20} />
             </div>
           </div>
-          <ul className="text-textMain font-bold pl-8">
+          <ul
+            className={`bg-white list-disc rounded-md text-textMain pl-10 font-bold ${
+              openAuth ? "block" : "hidden"
+            }`}
+          >
             {authentications.map((item) => (
               <li key={item.id} className="mt-4">
-                <Link className="list-disc" to={item.path}>
+                <NavLink className="" to={item.path}>
                   {item.name}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -186,21 +196,21 @@ const Navbar = () => {
           onClick={() => setOpenMisc(!openMisc)}
           className="text-textMain mt-4 flex items-center gap-3 font-bold group cursor-pointer"
         >
-          <MdManageAccounts size={20} /> <span>Misc</span>{" "}
+          <HiOutlineCube size={20} /> <span>Misc</span>{" "}
           <div className={openMisc ? "rotate-90" : "rotate-0"}>
             <MdOutlineKeyboardArrowRight size={20} />
           </div>
         </div>
         <ul
-          className={`bg-white rounded-md text-textMain pl-10 font-bold ${
+          className={`bg-white list-disc rounded-md text-textMain pl-10 font-bold ${
             openMisc ? "block" : "hidden"
           }`}
         >
           {misc.map((item) => (
             <li key={item.id} className="mt-4">
-              <Link className="list-disc" to={item.path}>
+              <NavLink className="" to={item.path}>
                 {item.name}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -210,35 +220,36 @@ const Navbar = () => {
 
           {/* User Interface  */}
           <div
-            onClick={() => setOpenMisc(!openMisc)}
+            onClick={() => setOpenUI(!openUI)}
             className="text-textMain mt-4 flex items-center gap-3 font-bold group cursor-pointer"
           >
-            <MdManageAccounts size={20} /> <span>User Interface</span>{" "}
-            <div className={openMisc ? "rotate-90" : "rotate-0"}>
+            <BsBoxSeam size={20} /> <span>User Interface</span>{" "}
+            <div className={openUI ? "rotate-90" : "rotate-0"}>
               <MdOutlineKeyboardArrowRight size={20} />
             </div>
           </div>
           <ul
-            className={`bg-white rounded-md text-textMain pl-10 font-bold ${
-              openMisc ? "block" : "hidden"
+            className={`bg-white list-disc rounded-md text-textMain pl-10 font-bold ${
+              openUI ? "block" : "hidden"
             }`}
           >
             {userInterface.map((item) => (
               <li key={item.id} className="mt-4">
-                <Link className="list-disc" to={item.path}>
+                <NavLink className="" to={item.path}>
                   {item.name}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
         </div>
       </div>
+
       <div
         onClick={() => setOpenMenu(false)}
         className={`absolute top-0 left-0 bottom-0 right-0 z-20 cursor-pointer opacity-25 bg-gray-400 ${
           openMenu ? "block" : "hidden"
         }`}
-      ></div>
+      />
     </>
   );
 };
